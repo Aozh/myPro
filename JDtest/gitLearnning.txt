@@ -1,0 +1,32 @@
+pwd 显示当前路径
+ls显示当前文件夹文件 ls -ah显示包括隐藏文件
+ find . -name ".git"查找文件
+git bash 出现vim的时候怎么退出
+如果是输出状态，首先Esc退出输入状态，然后Shift+;，再输入q!或wq!（不保存改动，wq!是保存文件的写入修改）退出
+
+  git init创建本地仓库
+直接删除.git 文件 删除本地仓库（此处在工作区出过问题）
+ git commit -m "说明一下"
+ git checkout -b dev创建dev分支
+ git checkout dev切换分支
+ git branch查看分之
+ git merge dev和当前分支合并（以后一个分之修改的内容为主）
+合并的时候容易产生冲突 git status查看后手动修改文件
+ git branch -d dev删除这个分支
+ git log --graph --pretty=oneline --abbrev-commit查看提交日志
+ git status查看状态，git diff查看修改内容
+
+ 版本回退 主要是HEAD指针指向，版本号git log查看，或者git reflog查看指令，git reset --HARD 版本号或者HEAD^指向前一个版本，相当于提交的master切换，也就是说git保留了master修改的所有部分
+cat查看内容
+弄明白暂存区stage就明白了git add和commit原理
+untracked没有被添加add的文件
+git是管理变化而不是管理文件的
+git checkout -- file撤销修改，无论在工作区还是暂存区
+git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区
+以上为丢弃暂存区或者工作区的修改
+提交到本地仓库就不需要担心误删除文件
+关联远程仓库git remote add git@github.com:Aozh/myPro.git
+推送git push -u origin master
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
+当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
+上面的做法很棒
