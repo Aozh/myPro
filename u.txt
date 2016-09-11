@@ -5,8 +5,4 @@ The first change;
 devcom change
 master dev
 
-<<<<<<< HEAD
-master master
-=======
-dev dev dev
->>>>>>> dev
+
